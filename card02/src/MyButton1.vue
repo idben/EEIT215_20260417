@@ -1,5 +1,20 @@
 <script setup></script>
 <template>
-    <button class="btn btn-warning m-1">我是按鈕</button>
+    <button class="btn btn-warning btn-color1 m-1">我是按鈕</button>
 </template>
-<style scoped></style>
+<style scoped>
+.btn-color1 {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #7c3aed;
+    --bs-btn-border-color: #7c3aed;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #6d28d9;
+    --bs-btn-hover-border-color: #6d28d9;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #5b21b6;
+    --bs-btn-active-border-color: #5b21b6;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #c4b5fd;
+    --bs-btn-disabled-border-color: #c4b5fd;
+}
+</style>
