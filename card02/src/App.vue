@@ -47,8 +47,13 @@ import MyButton1 from './MyButton1.vue';
       <template #icon>
         <i class="fa-solid fa-star"></i>
       </template>
-      加入我的最愛
+
+      <template #default>
+        加入我的最愛
+      </template>
     </MyButton1>
+
+
     <MyButton1></MyButton1>
   </div>
 </template>
