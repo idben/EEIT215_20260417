@@ -29,21 +29,21 @@ import MyButton1 from './MyButton1.vue';
 
     <hr>
 
-    <MyButton1>
+    <MyButton1 size="sm">
       <template #icon>
         <i class="fa-solid fa-registered"></i>
       </template>
       註冊
     </MyButton1>
 
-    <MyButton1>
+    <MyButton1 size="md">
       登入
       <template #icon>
         <i class="fa-solid fa-arrow-right-to-bracket"></i>
       </template>
     </MyButton1>
 
-    <MyButton1>
+    <MyButton1 size="lg">
       <template #icon>
         <i class="fa-solid fa-star"></i>
       </template>
@@ -53,8 +53,6 @@ import MyButton1 from './MyButton1.vue';
       </template>
     </MyButton1>
 
-
-    <MyButton1></MyButton1>
   </div>
 </template>
 <style scoped></style>

@@ -1,7 +1,14 @@
-<script setup></script>
+<script setup>
+const props = defineProps({
+    size: {
+        type: String,
+        default: "md"
+    }
+})
+</script>
 
 <template>
-    <button class="btn btn-warning btn-color1 m-1">
+    <button class="btn btn-warning btn-color1 m-1" :class="`btn-${props.size}`">
         <slot name="icon"></slot>
         <slot name="default">按鈕</slot>
     </button>
