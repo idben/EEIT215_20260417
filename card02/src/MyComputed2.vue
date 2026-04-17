@@ -7,6 +7,8 @@ const todos = ref([
     { id: 3, text: '準備簡報', completed: false },
 ])
 
+const filter = ref("all");
+
 const total = computed(() => todos.value.length);
 const completedCount = computed(() => todos.value.filter(todo => todo.completed).length);
 const remainingCount = computed(() => todos.value.filter(todo => !todo.completed).length);
@@ -22,6 +24,12 @@ const remainingCount = computed(() => todos.value.filter(todo => !todo.completed
             {{ todo.text }}
         </li>
     </ul>
+    <div class="d-flex mt-3">
+        {{ filter }}
+        <button class="btn btn-primary btn-sm ms-auto">全部</button>
+        <button class="btn btn-primary btn-sm ms-1">待處理</button>
+        <button class="btn btn-primary btn-sm ms-1">已完成</button>
+    </div>
     <div>總計: {{ total }}</div>
     <div>已完成: {{ completedCount }}</div>
     <div>待處理: {{ remainingCount }}</div>
