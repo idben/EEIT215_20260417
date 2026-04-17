@@ -12,6 +12,16 @@ const filter = ref("all");
 const total = computed(() => todos.value.length);
 const completedCount = computed(() => todos.value.filter(todo => todo.completed).length);
 const remainingCount = computed(() => todos.value.filter(todo => !todo.completed).length);
+
+const todos2 = computed(function () {
+    if (filter.value == "active") {
+        return todos.value.filter(todo => !todo.completed)
+    };
+    if (filter.value == "completed") {
+        return todos.value.filter(todo => todo.completed)
+    };
+    return todos.value;
+});
 </script>
 <template>
     <div class="d-flex align-items-center">
@@ -20,15 +30,15 @@ const remainingCount = computed(() => todos.value.filter(todo => !todo.completed
         <span class="badge text-bg-danger ms-1">todo</span>
     </div>
     <ul class="list-group">
-        <li v-for="todo in todos" :key="todo.id" class="list-group-item">
+        <li v-for="todo in todos2" :key="todo.id" class="list-group-item">
             {{ todo.text }}
         </li>
     </ul>
     <div class="d-flex mt-3">
         {{ filter }}
-        <button class="btn btn-primary btn-sm ms-auto">全部</button>
-        <button class="btn btn-primary btn-sm ms-1">待處理</button>
-        <button class="btn btn-primary btn-sm ms-1">已完成</button>
+        <button @click="filter = 'all'" class="btn btn-primary btn-sm ms-auto">全部</button>
+        <button @click="filter = 'active'" class="btn btn-primary btn-sm ms-1">待處理</button>
+        <button @click="filter = 'completed'" class="btn btn-primary btn-sm ms-1">已完成</button>
     </div>
     <div>總計: {{ total }}</div>
     <div>已完成: {{ completedCount }}</div>
