@@ -56,7 +56,7 @@ import MyComputed2 from './MyComputed2.vue';
     </MyButton1>
     <hr>
     <MyComputed />
-    <hr>
+    <hr class="border border-primary border-2 mt-5">
     <MyComputed2 />
   </div>
 </template>
