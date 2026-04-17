@@ -29,9 +29,26 @@ import MyButton1 from './MyButton1.vue';
 
     <hr>
 
-    <MyButton1>註冊</MyButton1>
-    <MyButton1>登入</MyButton1>
-    <MyButton1>加入我的最愛</MyButton1>
+    <MyButton1>
+      <template #icon>
+        <i class="fa-solid fa-registered"></i>
+      </template>
+      註冊
+    </MyButton1>
+
+    <MyButton1>
+      登入
+      <template #icon>
+        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+      </template>
+    </MyButton1>
+
+    <MyButton1>
+      <template #icon>
+        <i class="fa-solid fa-star"></i>
+      </template>
+      加入我的最愛
+    </MyButton1>
     <MyButton1></MyButton1>
   </div>
 </template>
