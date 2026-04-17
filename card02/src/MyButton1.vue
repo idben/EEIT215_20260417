@@ -1,6 +1,8 @@
 <script setup></script>
 <template>
-    <button class="btn btn-warning btn-color1 m-1">我是按鈕</button>
+    <button class="btn btn-warning btn-color1 m-1">
+        <slot>按鈕</slot>
+    </button>
 </template>
 <style scoped>
 .btn-color1 {

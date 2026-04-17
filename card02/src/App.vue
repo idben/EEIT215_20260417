@@ -32,6 +32,7 @@ import MyButton1 from './MyButton1.vue';
     <MyButton1>註冊</MyButton1>
     <MyButton1>登入</MyButton1>
     <MyButton1>加入我的最愛</MyButton1>
+    <MyButton1></MyButton1>
   </div>
 </template>
 <style scoped></style>
