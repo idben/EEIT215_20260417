@@ -1,5 +1,6 @@
 <script setup>
 import MyButton1 from './MyButton1.vue';
+import MyComputed from './MyComputed.vue';
 </script>
 <template>
   <div class="container">
@@ -29,21 +30,21 @@ import MyButton1 from './MyButton1.vue';
 
     <hr>
 
-    <MyButton1 size="sm">
+    <MyButton1 size="sm" :aaa="1">
       <template #icon>
         <i class="fa-solid fa-registered"></i>
       </template>
       註冊
     </MyButton1>
 
-    <MyButton1 size="md">
+    <MyButton1 size="md" :aaa="2">
       登入
       <template #icon>
         <i class="fa-solid fa-arrow-right-to-bracket"></i>
       </template>
     </MyButton1>
 
-    <MyButton1 size="lg">
+    <MyButton1 size="lg" :aaa="3">
       <template #icon>
         <i class="fa-solid fa-star"></i>
       </template>
@@ -52,7 +53,8 @@ import MyButton1 from './MyButton1.vue';
         加入我的最愛
       </template>
     </MyButton1>
-
+    <hr>
+    <MyComputed />
   </div>
 </template>
 <style scoped></style>

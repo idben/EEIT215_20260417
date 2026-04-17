@@ -3,6 +3,10 @@ const props = defineProps({
     size: {
         type: String,
         default: "md"
+    },
+    aaa: {
+        type: Number,
+        required: true
     }
 })
 </script>
@@ -10,7 +14,7 @@ const props = defineProps({
 <template>
     <button class="btn btn-warning btn-color1 m-1" :class="`btn-${props.size}`">
         <slot name="icon"></slot>
-        <slot name="default">按鈕</slot>
+        <slot name="default">按鈕</slot>{{ aaa }}
     </button>
 </template>
 
