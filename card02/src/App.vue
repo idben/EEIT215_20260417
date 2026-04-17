@@ -4,6 +4,7 @@ import MyComputed from './MyComputed.vue';
 import MyComputed2 from './MyComputed2.vue';
 import MyButton2 from './MyButton2.vue';
 import MyButton3 from './MyButton3.vue';
+import MyButton12 from './MyButton12.vue';
 </script>
 <template>
   <div class="container">
@@ -101,6 +102,11 @@ import MyButton3 from './MyButton3.vue';
         加入我的最愛
       </template>
     </MyButton3>
+
+
+    <hr class="border border-info border-2 mt-5">
+
+    <MyButton12 size="lg" text="唉居" :icons="['fa-brands', 'fa-square-instagram']" />
 
   </div>
 </template>
