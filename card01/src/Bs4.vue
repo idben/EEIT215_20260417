@@ -27,16 +27,15 @@ const cards = reactive([
 const num = ref(0);
 
 const nextOne = () => {
-    num.value++;
-    if (num.value >= cards.length) {
-        num.value = 0;
+    if (num.value < cards.length) {
+        num.value++;
     }
+
 }
 
 const prevOne = () => {
-    num.value--;
-    if (num.value < 0) {
-        num.value = cards.length - 1;
+    if (num.value > 0) {
+        num.value--;
     }
 }
 
@@ -53,8 +52,15 @@ const prevOne = () => {
                     <p>{{ cards[num].content }}</p>
                 </div>
                 <div class="card-footer d-flex justify-content-between">
-                    <button @click="prevOne" type="button" class="btn btn-info">上一個</button>
-                    <button @click="nextOne" type="button" class="btn btn-info">下一個</button>
+                    <div :style="{ cursor: num <= 0 ? 'not-allowed' : 'pointer' }">
+                        <button :disabled="num <= 0" @click="prevOne" type="button" class="btn btn-info">上一個</button>
+
+                    </div>
+                    <div :style="{ cursor: num >= cards.length - 1 ? 'not-allowed' : 'pointer' }">
+                        <button :disabled="num >= cards.length - 1" @click="nextOne" type="button"
+                            class="btn btn-info">下一個</button>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -67,5 +73,10 @@ const prevOne = () => {
 
 .mh300px {
     min-height: 300px;
+}
+
+.aaa {
+    /* cursor: pointer; 手指 */
+    /* cursor: not-allowed; 禁止 */
 }
 </style>
