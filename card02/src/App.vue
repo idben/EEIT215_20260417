@@ -1,6 +1,7 @@
 <script setup>
 import MyButton1 from './MyButton1.vue';
 import MyComputed from './MyComputed.vue';
+import MyComputed2 from './MyComputed2.vue';
 </script>
 <template>
   <div class="container">
@@ -55,6 +56,8 @@ import MyComputed from './MyComputed.vue';
     </MyButton1>
     <hr>
     <MyComputed />
+    <hr>
+    <MyComputed2 />
   </div>
 </template>
 <style scoped></style>
