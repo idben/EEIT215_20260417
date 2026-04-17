@@ -5,6 +5,11 @@ import MyComputed2 from './MyComputed2.vue';
 import MyButton2 from './MyButton2.vue';
 import MyButton3 from './MyButton3.vue';
 import MyButton12 from './MyButton12.vue';
+
+const myAlert1 = (text1 = "我", text2 = "好餓") => {
+  alert(`${text1}${text2}`);
+}
+
 </script>
 <template>
   <div class="container">
@@ -106,7 +111,7 @@ import MyButton12 from './MyButton12.vue';
 
     <hr class="border border-info border-2 mt-5">
 
-    <MyButton12 size="lg" text="唉居" :icons="['fa-brands', 'fa-square-instagram']" />
+    <MyButton12 size="lg" text="唉居" :icons="['fa-brands', 'fa-square-instagram']" @alert1="myAlert1" />
 
   </div>
 </template>

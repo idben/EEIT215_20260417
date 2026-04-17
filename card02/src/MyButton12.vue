@@ -13,10 +13,12 @@ const props = defineProps({
         required: true
     }
 })
+
+const emits = defineEmits(['alert1']);
 </script>
 
 <template>
-    <button class="btn btn-warning btn-color1 m-1" :class="`btn-${props.size}`">
+    <button @click="emits('alert1', '鄭麗文', '還我錢')" class="btn btn-warning btn-color1 m-1" :class="`btn-${props.size}`">
         <i :class="icons"></i>
         {{ props.text }}
     </button>
