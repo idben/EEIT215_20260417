@@ -3,6 +3,7 @@ import MyButton1 from './MyButton1.vue';
 import MyComputed from './MyComputed.vue';
 import MyComputed2 from './MyComputed2.vue';
 import MyButton2 from './MyButton2.vue';
+import MyButton3 from './MyButton3.vue';
 </script>
 <template>
   <div class="container">
@@ -85,6 +86,22 @@ import MyButton2 from './MyButton2.vue';
         加入我的最愛
       </template>
     </MyButton2>
+
+    <hr class="border border-warning border-2 mt-5">
+
+    <MyButton3 size="md">
+      登入
+      <template #icon="{ iconClass }">
+        <i class="fa-solid fa-arrow-right-to-bracket" :class="iconClass"></i>
+      </template>
+    </MyButton3>
+
+    <MyButton3 size="lg">
+      <template #default>
+        加入我的最愛
+      </template>
+    </MyButton3>
+
   </div>
 </template>
 <style scoped></style>
